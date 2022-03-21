@@ -1,0 +1,32 @@
+<launch>
+<group ns="r1">
+  <!-- Arguments -->
+  <arg name="map_file" default="$(find amcl_slam)/map/arena1.yaml"/>
+
+  
+	 <arg name="robot_id" default="r1"/>
+
+    <!--node pkg="tf" type="tf_remap" name="tf_remapper" output="screen">
+      <rosparam param="mappings">
+        [{old: map, new: $(arg robot_id)/map},{old: odom, new: $(arg robot_id)/base_odom}, {old: base_link, new: $(arg robot_id)/base_lisk},{old: laser, new: $(arg robot_id)/base_laser},{old: base_imu, new: $(arg robot_id)/base_imu}]
+      </rosparam>
+</node-->
+
+
+  <arg name="open_rviz" default="true"/>
+  
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find amcl_slam)/launch/amcl.launch"/>
+
+
+
+<!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"/>
+  </group>
+
+</group>
+</launch>

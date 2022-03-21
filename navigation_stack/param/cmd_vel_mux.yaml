@@ -1,0 +1,23 @@
+subscribers:
+  - name:        "Pose controller cmd_vel"
+    topic:       "/r5/pose/cmd_vel"
+    timeout:     0.1
+    priority:    0
+    short_desc:  "This is the cmd_vel from amr_fleet"
+  - name:        "GUI teleop"
+    topic:       "/r5/mobile_base/commands/gui/velocity"
+    timeout:     0.5
+    priority:    1
+    short_desc:  "GUI Teleop cmd_vel"
+  - name:        "Lidar"
+    topic:       "/r5/lidar/cmd_vel"
+    timeout:     0.5
+    priority:    2
+    short_desc:  "Lidar cmd_vel"
+  - name:        "Teleop keyboard"
+    topic:       "/r5/keyboard/cmd_vel"
+    timeout:     0.5
+    priority:    3
+    short_desc:  "Teleop keyboard cmd_vel"
+
+publisher:       "/r5/cmd_vel"

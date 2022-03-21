@@ -1,0 +1,9 @@
+digraph G {
+"r1/base_link" -> "r1/base_camera"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1637308356.525 sec old)\nBuffer length: 0.000 sec\n"];
+"r1/base_link" -> "r1/base_imu"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1637308356.525 sec old)\nBuffer length: 0.000 sec\n"];
+"r1/base_link" -> "r1/base_laser"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1637308356.525 sec old)\nBuffer length: 0.000 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1637308356.525"[ shape=plaintext ] ;
+ }->"r1/base_link";
+}

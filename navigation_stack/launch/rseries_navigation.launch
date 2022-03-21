@@ -1,0 +1,29 @@
+<launch>
+
+  <arg name="odom_topic" default="r5/base_odom" />
+
+  <node name="map_server" pkg="map_server" type="map_server"
+      args="$(find rseries_navigation)/maps/arena.yaml" output="screen">
+  </node>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+     <rosparam file="$(find rseries_navigation)/param/costmap_commons_params.yaml" command="load" ns="global_costmap" />
+     <rosparam file="$(find rseries_navigation)/param/costmap_commons_params.yaml" command="load" ns="local_costmap" />
+     <rosparam file="$(find rseries_navigation)/param/local_costmap_params.yaml" command="load" />
+     <rosparam file="$(find rseries_navigation)/param/global_costmap_params.yaml" command="load" />
+     <rosparam file="$(find rseries_navigation)/param/move_base_params.yaml" command="load" />
+
+     <!-- Global Planner -->
+     <rosparam file="$(find rseries_navigation)/param/planner.yaml" command="load" />
+
+     <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS"/>
+
+     <!-- reset frame_id parameters using user input data -->
+     <remap from="odom" to="$(arg odom_topic)"/>
+     <remap from="cmd_vel" to="r5/cmd_vel"/>
+
+  </node>
+
+</launch>
