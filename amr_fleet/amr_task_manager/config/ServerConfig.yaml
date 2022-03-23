@@ -1,0 +1,2 @@
+tasksConfigurationFile: "config/TasksConfiguration.yaml"
+planPathService: "/planner/plan_path"

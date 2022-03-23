@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Gazebo simulation -->
+    <include file="$(find amr_gazebo)/launch/world.launch"/>
+
+    <!-- Map -->
+    <include file="$(find amr_fleet)/launch/map_server.launch"/>
+
+    <!-- Graph generator -->
+    <include file="$(find amr_graph_generator)/launch/graph_generator.launch"/>
+
+    <!-- Planner -->
+    <include file="$(find amr_planner)/launch/planner.launch"/>
+
+    <!-- Task manager -->
+    <include file="$(find amr_task_manager)/launch/task_manager_server.launch"/>
+
+    <!-- Semaphore server -->
+    <include file="$(find amr_semaphore)/launch/semaphore_server.launch"/>
+
+    <!-- Fleet control gui -->
+    <include file="$(find amr_gui)/launch/gui.launch"/>
+
+    <!-- Rviz -->
+    <include file="$(find amr_fleet)/launch/rviz.launch"/>
+
+</launch>

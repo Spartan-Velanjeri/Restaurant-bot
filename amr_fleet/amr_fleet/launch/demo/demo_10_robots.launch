@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- spaw r robot -->
+    <include file="$(find amr_fleet)/launch/simulation_client.launch">
+        <arg name="robot_id" value="r2"/>
+        <arg name="x_pos" default="0.6"/>
+        <arg name="y_pos" default="3.0"/>
+        <arg name="a_pos" default="1.57"/>
+        <arg name="max_speed" value="0.2"/>
+        <arg name="locked_nodes_forward" value="1"/>
+    </include>
+
+    <!-- spaw r2 robot -->
+    <include file="$(find amr_fleet)/launch/simulation_client.launch">
+        <arg name="robot_id" value="r3"/>
+        <arg name="x_pos" value="0.6"/>
+        <arg name="y_pos" value="2.26"/>
+        <arg name="a_pos" value="1.57"/>
+        <arg name="max_speed" value="0.2"/>
+        <arg name="locked_nodes_forward" value="1"/>
+    </include>
+
+    <!-- spaw r3 robot -->
+    <include file="$(find amr_fleet)/launch/simulation_client.launch">
+        <arg name="robot_id" value="r4"/>
+        <arg name="x_pos" value="0.6"/>
+        <arg name="y_pos" value="1.53"/>
+        <arg name="a_pos" value="1.57"/>
+        <arg name="max_speed" value="0.2"/>
+        <arg name="locked_nodes_forward" value="1"/>
+    </include>
+
+    <include file="$(find amr_fleet)/launch/simulation_client.launch">
+        <arg name="robot_id" value="r5"/>
+        <arg name="x_pos" default="0.6"/>
+        <arg name="y_pos" default="0.8"/>
+        <arg name="a_pos" default="1.57"/>
+        <arg name="max_speed" value="0.2"/>
+        <arg name="locked_nodes_forward" value="1"/>
+    </include>
+
+    <!-- spaw r2 robot >
+    <include file="$(find amr_fleet)/launch/simulation_client.launch">
+        <arg name="robot_id" value="r6"/>
+        <arg name="x_pos" value="1.33"/>
+        <arg name="y_pos" value="0.8"/>
+        <arg name="a_pos" value="3.14"/>
+        <arg name="max_speed" value="0.2"/>
+        <arg name="locked_nodes_forward" value="1"/>
+    </include-->
+
+</launch>
