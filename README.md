@@ -17,6 +17,8 @@ In order to run this code run the arm_fleet.demo10.launch file
 ```
 which will launch the server and the robot launch files.
 
+
+## Do check out the videos folder to see the Robots in Action !
 For more information about the project, send me a mail @ parthanvelanjeri@hotmail.com
 
 Credits to my friend Gokulraj for helping with this project !
