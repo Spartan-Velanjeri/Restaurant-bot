@@ -1,4 +1,4 @@
-# Cook-Bot  
+## Cook-Bot
 
 This project consists of 4 Robots which can collect ingredients from 3 dispensers and drop it in the cooking station.
 
@@ -12,10 +12,9 @@ Ever robot has a client running which also gives the battery level of each robot
 
 Depending on the number of food orders, the robots' trajectories change.
 
-
-In order to run this code
-run arm_fleet.demo10.launch
-
+```typescript
+In order to run this code run the arm_fleet.demo10.launch file
+```
 which will launch the server and the robot launch files.
 
 For more information about the project, send me a mail @ parthanvelanjeri@hotmail.com
